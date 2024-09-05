@@ -26,7 +26,7 @@ RUN  LEDGER_ENABLED=false BUILD_TAGS=muslc LINK_STATICALLY=true  make build
 
 
 # --------------------------------------------------------
-FROM alpine:3.19
+FROM alpine:3.20
 
 COPY --from=go-builder /code/bin/starsd /usr/bin/starsd
 RUN apk add -U --no-cache ca-certificates
